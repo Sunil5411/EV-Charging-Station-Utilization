@@ -1,82 +1,108 @@
-<h1 align="center">
-🔌 EV Charging Station Utilization Dashboard 📊
-</h1>
+# ⚡ EV Charging Station Utilization Dashboard
 
-<p align="center">
-🚗⚡ A complete data analytics solution to analyze EV station performance, optimize utilization, and support strategic infrastructure planning using real-time data pipelines and interactive dashboards.
-</p>
+![Power BI](https://img.shields.io/badge/Built%20With-Power%20BI-blue?style=for-the-badge&logo=powerbi)
+![Tech Stack](https://img.shields.io/badge/Tech-Python%20|%20Pandas%20|%20Geo%20Data%20|%20Power%20BI-yellow?style=for-the-badge)
+![Domain](https://img.shields.io/badge/Domain-Energy%20Analytics-green?style=for-the-badge)
 
 ---
 
-## 🛠️ Tech Stack
+## 📌 Project Summary
 
-| Category          | Technologies Used |
-|------------------|-------------------|
-| 🔄 Data Pipeline | Open Charge Map API, Python (Requests, Pandas) |
-| 🗄️ Database       | MySQL, MySQL Workbench |
-| 📊 Visualization  | Power BI |
-| 🌐 Tools & Skills | Geospatial Clustering, Heatmaps, KPI Analysis, ETL Automation |
+This dashboard helps urban planners and EV companies track and optimize **charging station performance**.  
+It uses Python and Power BI to identify **utilization gaps**, **peak demand zones**, and **idle/overloaded locations** to drive smarter deployment decisions.
 
 ---
 
-## 📌 Project Highlights
+## 🎯 Business Problem
 
-- Processed **2,000+ EV charging sessions** from Open Charge Map API.
-- Identified a **93% average utilization rate** across stations.
-- Detected **peak-hour bottlenecks** via heatmaps and time-series analysis.
-- Automated the full data pipeline from ingestion → transformation → dashboard.
-- Delivered **actionable insights** for optimizing station placement and load balancing.
+EV infrastructure expansion often faces inefficiency due to:
 
----
+- Underutilized or overloaded stations  
+- Uneven demand across geographies  
+- Lack of real-time usage monitoring
 
-## 📈 Top 5 Unique KPIs
-
-| KPI # | Description |
-|-------|-------------|
-| 🔋 1. **Average Utilization Rate (%)** – % of time stations were actively charging. |
-| 🕒 2. **Peak-Hour Load Index** – Station load during peak hours vs. off-peak. |
-| 📍 3. **Station Downtime Frequency** – Count of inactive hours across stations. |
-| 📊 4. **Regional Demand Clustering** – Number of clusters by geographic demand. |
-| ⚠️ 5. **Underperforming Station Score** – Weighted score for low-usage stations based on location, availability, and usage patterns. |
+This project aims to solve this by providing insights into **location-level utilization trends**, enabling optimized rollout strategies.
 
 ---
 
-## 🚀 How It Works
+## 🔍 Key Features
 
-1. **Data Ingestion** – Pulled charging station and session data using Open Charge Map API.
-2. **Storage** – Structured and stored data in MySQL.
-3. **Transformation** – Cleaned and aggregated data using Python (Pandas).
-4. **Analytics & Visualization** – Built a dynamic Power BI dashboard to present insights.
-5. **Automation** – Scheduled data refresh pipeline to keep dashboards up-to-date.
-
----
-
-## 📸 Sample Dashboard
-
-> _(Insert screenshot of your Power BI dashboard here)_
+- 🗺️ Location-wise utilization analysis  
+- 🔋 Peak hour and idle station detection  
+- 📍 Demand clustering by city/region  
+- ⚡ Overload flagging for maintenance planning  
+- 📈 Deployment recommendations for new zones
 
 ---
 
-## 🤝 Collaboration & Feedback
+## 🛠 Tech Stack
 
-Feel free to open issues or contribute suggestions! Feedback is always welcome to make the project better 🙌
-
----
-
-## 🧠 Lessons Learned
-
-- Developed skills in **geospatial data analysis** and **API integration**.
-- Improved understanding of **ETL automation** and **real-time dashboarding**.
-- Gained experience in converting raw operational data into business-ready insights.
+- **Language:** Python  
+- **Libraries:** `pandas`, `geopandas`, `datetime`  
+- **Data:** CSV + geo-tagged station logs  
+- **Visualization:** Power BI  
+- **File Format:** `.pbix`
 
 ---
 
-## 📬 Contact
+## 🧠 Architecture
 
-Connect with me on [LinkedIn](https://www.linkedin.com/in/sunilredd/) or email me at 📩 **sunilkumareddy8@gmail.com** for collaboration, job opportunities, or feedback!
+```mermaid
+flowchart TD
+    subgraph KPIs
+        KPI1["Station Utilization %"]
+        KPI2["Peak Hours by City"]
+        KPI3["Location-Wise Demand"]
+        KPI4["Overloaded Stations"]
+        KPI5["Idle Stations Detected"]
+    end
 
----
+    SRC["📥 EV Station Log Data (Geo CSV)"] --> PY["🐍 Python Script"]
+    PY --> PD["🧹 Pandas + Geo Cleanup"]
+    PD --> DB["📊 Excel Table / DB"]
+    DB --> BI["📈 Power BI Dashboard"]
+    BI --> OUT["💡 Deployment & Efficiency Insights"]
+    BI --> KPI1 & KPI2 & KPI3 & KPI4 & KPI5
 
-<p align="center">
-💡 Data-driven decisions = Smarter infrastructure = Greener future 🌍⚡
-</p>
+```
+## 📊 KPIs Tracked
+Charging Station Utilization %
+
+Peak Demand Hours per Region
+
+Geographic Demand Concentration
+
+Overloaded vs Idle Stations
+
+Deployment Suggestions
+
+## 📸 Dashboard Preview
+
+## 🚧 Challenges & Learnings
+Cleaning inconsistent geo-coordinates
+
+Mapping idle stations and clustering usage
+
+Visualizing overloads using conditional formatting
+
+Enhancing user experience via tooltip filters
+
+## 🚀 Future Enhancements
+Add live integration from IoT station APIs
+
+Build alert system for idle/overload zones
+
+Deploy as web app with live map interactivity
+
+Integrate cost efficiency analytics by zone
+
+## 👨‍💻 About Me
+Hi, I'm B. Sunil Kumar Reddy, a Data Analyst who builds real-world dashboards from real-world data.
+Focused on APIs, automation, and business value through analytics.
+
+🔗 LinkedIn Profile(https://www.linkedin.com/in/sunilreddy-data-analyst/)
+
+💻 Explore More Projects(https://github.com/Sunil5411)
+
+## ⭐ Support
+If you found this project helpful, feel free to give it a ⭐ — it motivates me to keep building and sharing more real-world analytics projects.
